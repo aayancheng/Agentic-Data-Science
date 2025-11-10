@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+.env.*
+pip-wheel-metadata/
+.mypy_cache/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter_data/
+.matplotlib/
+
+# Node / build
+node_modules/
+dist/
+.parcel-cache/
+.next/
+.vite/
+
+# Editors
+.vscode/
+.idea/
+
+# Data (keep raw data + external downloads out of git)
+data/raw/
+data/external/
+data/interim/
+
+# OS
+.DS_Store
