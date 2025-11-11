@@ -38,3 +38,15 @@ cd apps/react/frontend
 npm install
 npm run dev
 ```
+
+## Fraud Threshold Explorer UI
+- Demo data lives in `data/sample/fraud_threshold_demo.json` (50 curated transactions). Regenerate anytime via `python3 scripts/make_sample_slices.py`.
+- The FastAPI backend exposes `GET /api/fraud/demo`, serving the cached sample along with metadata.
+- The React tab "Fraud" now loads an interactive threshold explorer with precision/recall cards, a chart, and an outcome-colored table.
+- Update the frontend locally with:
+  ```bash
+  cd apps/react/frontend
+  npm install   # first run
+  npm run dev   # serve UI
+  npm test      # runs vitest suite for fraud metrics helpers
+  ```
