@@ -1004,3 +1004,2004 @@ Documenting the cadence ensures transparency and sets expectations for stakehold
 
 ---
 _End of document._
+
+
+---
+## Part A – Professional Tone Narrative for Executives
+
+The following section retells the fraud model story in a concise voice aimed at executives and board-level audiences. Each subsection focuses on translating a technical artifact from `notebooks/fraud_eda.ipynb`, `apps/react/backend`, `apps/react/frontend`, or the supporting evidence pack into a direct business discussion. The goal is to make the business outcome of the fraud detection model transparent without requiring any statistical background.
+
+### A.1 Visual Evidence Exported from the Modeling Notebook
+
+![Class balance exported from the notebook](images/fraud_eda_table_class_balance.png)
+
+The class balance snapshot above is lifted directly from the exploratory notebook. It reassures leaders that the team understands how rare fraud cases are and why every false negative matters. Executives can immediately see that the base-rate challenge is built into the plan rather than being treated as an afterthought.
+
+![Summary statistics table](images/fraud_eda_table_summary_stats.png)
+
+This table shows the top-line transaction behaviors (amounts, time, and anonymized components). Presenting it early in the executive narrative prevents confusion about the data foundation and anchors the discussion in facts rather than anecdotes.
+
+![Fraud detection threshold tuning table](images/fraud_eda_table_best_threshold.png)
+
+The best-threshold table is the visual contract between model developers and fraud leadership. It connects directly to staffing assumptions because it spells out how many alerts are generated at different recall targets.
+
+![Confusion matrix evidence](images/fraud_eda_table_confusion_matrix.png)
+
+The confusion matrix screenshot demonstrates how often the model is right or wrong in the validation slice. Showing the exact counts is useful for senior leaders who are accustomed to operational scorecards.
+
+![High-risk hour concentration chart](images/fraud_eda_table_top_hours.png)
+
+Attackers concentrate on specific hours. Executives need to see the timing so that they can coordinate staffing, system maintenance windows, and channel messaging with the risk profile.
+
+![Amount distribution chart showing fraud lift](images/fraud_eda_chart_01.png)
+
+The amount distribution chart pairs with the operations stories that follow. High-dollar anomalies are easy to tie back to budget planning, so the visual is intentionally kept near the start of the executive narrative.
+
+### A.2 Artifact-to-Business Translation Table
+
+| Technical Artifact | Business Question Answered | Executive Decision Enabled | Evidence Link |
+| --- | --- | --- | --- |
+| `notebooks/fraud_eda.ipynb` | Are we using trustworthy data with known limitations? | Approve prototype scope and data licensing budgets. | Notebook markdown cells and schema checks. |
+| `docs/images/fraud_eda_table_summary_stats.png` | What is the monetary shape of the portfolio we tested? | Align loss forecasts with actual amount distributions. | Notebook export in evidence pack. |
+| `docs/images/fraud_eda_table_best_threshold.png` | How does threshold tuning influence workload? | Set monthly staffing targets for manual review teams. | Notebook ROC/PR analysis. |
+| `apps/react/frontend/src/pages/FraudThresholdExplorer.jsx` | Can operations adjust levers without code changes? | Delegate queue management to regional leaders. | Live demo plus UI documentation. |
+| `apps/react/backend/main.py` | How will the model surface predictions to other systems? | Approve integration budget and security review. | FastAPI code walkthrough and swagger output. |
+| `docs/images/fraud_eda_table_confusion_matrix.png` | What is the concrete validation outcome? | Validate that the model meets board-approved KPIs. | Confusion matrix evidence exported from notebook. |
+
+### A.3 Narrative Anchor Statements
+
+The remainder of Part A provides extended plain-language context. Each block starts with a technical artifact and then outlines why it matters to finance, operations, compliance, and customer leaders.
+
+#### Artifact Spotlight — notebooks/fraud_eda.ipynb
+This notebook organizes the entire exploratory analysis journey, from data import to chart exports.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This notebook organizes the entire exploratory analysis journey, from data import to chart exports.
+  Executives can quote notebooks/fraud_eda.ipynb when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use notebooks/fraud_eda.ipynb to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because notebooks/fraud_eda.ipynb is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by notebooks/fraud_eda.ipynb.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because notebooks/fraud_eda.ipynb maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed notebooks/fraud_eda.ipynb outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing notebooks/fraud_eda.ipynb, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference notebooks/fraud_eda.ipynb to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because notebooks/fraud_eda.ipynb aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing notebooks/fraud_eda.ipynb.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because notebooks/fraud_eda.ipynb is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite notebooks/fraud_eda.ipynb when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because notebooks/fraud_eda.ipynb is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because notebooks/fraud_eda.ipynb makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_table_summary_stats.png
+This static table turns raw descriptive statistics into a page executives can absorb in seconds.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This static table turns raw descriptive statistics into a page executives can absorb in seconds.
+  Executives can quote docs/images/fraud_eda_table_summary_stats.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_table_summary_stats.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_table_summary_stats.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_table_summary_stats.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_table_summary_stats.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_table_summary_stats.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_table_summary_stats.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_table_summary_stats.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_table_summary_stats.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_table_summary_stats.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_table_summary_stats.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_table_summary_stats.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_table_summary_stats.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_table_summary_stats.png makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_table_class_balance.png
+This table is the fast proof that fraud really is a needle-in-a-haystack problem.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This table is the fast proof that fraud really is a needle-in-a-haystack problem.
+  Executives can quote docs/images/fraud_eda_table_class_balance.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_table_class_balance.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_table_class_balance.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_table_class_balance.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_table_class_balance.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_table_class_balance.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_table_class_balance.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_table_class_balance.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_table_class_balance.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_table_class_balance.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_table_class_balance.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_table_class_balance.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_table_class_balance.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_table_class_balance.png makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_table_best_threshold.png
+This artifact shows the precise probability cutoffs that were tested and the workloads that follow.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This artifact shows the precise probability cutoffs that were tested and the workloads that follow.
+  Executives can quote docs/images/fraud_eda_table_best_threshold.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_table_best_threshold.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_table_best_threshold.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_table_best_threshold.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_table_best_threshold.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_table_best_threshold.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_table_best_threshold.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_table_best_threshold.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_table_best_threshold.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_table_best_threshold.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_table_best_threshold.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_table_best_threshold.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_table_best_threshold.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_table_best_threshold.png makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_table_confusion_matrix.png
+This is the raw count of true/false positives and negatives from the validation set.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This is the raw count of true/false positives and negatives from the validation set.
+  Executives can quote docs/images/fraud_eda_table_confusion_matrix.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_table_confusion_matrix.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_table_confusion_matrix.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_table_confusion_matrix.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_table_confusion_matrix.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_table_confusion_matrix.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_table_confusion_matrix.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_table_confusion_matrix.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_table_confusion_matrix.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_table_confusion_matrix.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_table_confusion_matrix.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_table_confusion_matrix.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_table_confusion_matrix.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_table_confusion_matrix.png makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_table_top_hours.png
+This exported table captures when fraudsters prefer to test the perimeter.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This exported table captures when fraudsters prefer to test the perimeter.
+  Executives can quote docs/images/fraud_eda_table_top_hours.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_table_top_hours.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_table_top_hours.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_table_top_hours.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_table_top_hours.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_table_top_hours.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_table_top_hours.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_table_top_hours.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_table_top_hours.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_table_top_hours.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_table_top_hours.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_table_top_hours.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_table_top_hours.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_table_top_hours.png makes trade-offs transparent.
+#### Artifact Spotlight — docs/images/fraud_eda_chart_01.png
+This chart overlays spend amounts for safe and fraudulent transactions to highlight value at risk.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This chart overlays spend amounts for safe and fraudulent transactions to highlight value at risk.
+  Executives can quote docs/images/fraud_eda_chart_01.png when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use docs/images/fraud_eda_chart_01.png to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because docs/images/fraud_eda_chart_01.png is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by docs/images/fraud_eda_chart_01.png.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because docs/images/fraud_eda_chart_01.png maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed docs/images/fraud_eda_chart_01.png outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing docs/images/fraud_eda_chart_01.png, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference docs/images/fraud_eda_chart_01.png to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because docs/images/fraud_eda_chart_01.png aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing docs/images/fraud_eda_chart_01.png.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because docs/images/fraud_eda_chart_01.png is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite docs/images/fraud_eda_chart_01.png when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because docs/images/fraud_eda_chart_01.png is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because docs/images/fraud_eda_chart_01.png makes trade-offs transparent.
+#### Artifact Spotlight — apps/react/frontend/src/pages/FraudThresholdExplorer.jsx
+The threshold explorer UI is the hands-on control panel for operations leaders.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The threshold explorer UI is the hands-on control panel for operations leaders.
+  Executives can quote apps/react/frontend/src/pages/FraudThresholdExplorer.jsx when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use apps/react/frontend/src/pages/FraudThresholdExplorer.jsx to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by apps/react/frontend/src/pages/FraudThresholdExplorer.jsx.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed apps/react/frontend/src/pages/FraudThresholdExplorer.jsx outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing apps/react/frontend/src/pages/FraudThresholdExplorer.jsx, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference apps/react/frontend/src/pages/FraudThresholdExplorer.jsx to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing apps/react/frontend/src/pages/FraudThresholdExplorer.jsx.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite apps/react/frontend/src/pages/FraudThresholdExplorer.jsx when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because apps/react/frontend/src/pages/FraudThresholdExplorer.jsx makes trade-offs transparent.
+#### Artifact Spotlight — apps/react/backend/main.py
+The FastAPI entry point demonstrates how predictions are packaged and served to enterprise systems.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The FastAPI entry point demonstrates how predictions are packaged and served to enterprise systems.
+  Executives can quote apps/react/backend/main.py when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use apps/react/backend/main.py to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because apps/react/backend/main.py is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by apps/react/backend/main.py.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because apps/react/backend/main.py maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed apps/react/backend/main.py outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing apps/react/backend/main.py, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference apps/react/backend/main.py to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because apps/react/backend/main.py aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing apps/react/backend/main.py.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because apps/react/backend/main.py is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite apps/react/backend/main.py when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because apps/react/backend/main.py is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because apps/react/backend/main.py makes trade-offs transparent.
+#### Artifact Spotlight — scripts/make_sample_slices.py
+This script produces lightweight files for demos so that stakeholders can validate scenarios.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This script produces lightweight files for demos so that stakeholders can validate scenarios.
+  Executives can quote scripts/make_sample_slices.py when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use scripts/make_sample_slices.py to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because scripts/make_sample_slices.py is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by scripts/make_sample_slices.py.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because scripts/make_sample_slices.py maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed scripts/make_sample_slices.py outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing scripts/make_sample_slices.py, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference scripts/make_sample_slices.py to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because scripts/make_sample_slices.py aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing scripts/make_sample_slices.py.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because scripts/make_sample_slices.py is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite scripts/make_sample_slices.py when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because scripts/make_sample_slices.py is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because scripts/make_sample_slices.py makes trade-offs transparent.
+#### Artifact Spotlight — StandardScaler preprocessing step
+Scaling keeps the model stable, which in business terms means fewer surprise jumps in alert counts.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Scaling keeps the model stable, which in business terms means fewer surprise jumps in alert counts.
+  Executives can quote StandardScaler preprocessing step when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use StandardScaler preprocessing step to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because StandardScaler preprocessing step is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by StandardScaler preprocessing step.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because StandardScaler preprocessing step maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed StandardScaler preprocessing step outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing StandardScaler preprocessing step, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference StandardScaler preprocessing step to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because StandardScaler preprocessing step aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing StandardScaler preprocessing step.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because StandardScaler preprocessing step is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite StandardScaler preprocessing step when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because StandardScaler preprocessing step is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because StandardScaler preprocessing step makes trade-offs transparent.
+#### Artifact Spotlight — Logistic Regression baseline model
+The logistic regression coefficients provide the transparent math that regulators prefer.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The logistic regression coefficients provide the transparent math that regulators prefer.
+  Executives can quote Logistic Regression baseline model when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Logistic Regression baseline model to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Logistic Regression baseline model is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Logistic Regression baseline model.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Logistic Regression baseline model maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Logistic Regression baseline model outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Logistic Regression baseline model, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Logistic Regression baseline model to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Logistic Regression baseline model aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Logistic Regression baseline model.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Logistic Regression baseline model is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Logistic Regression baseline model when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Logistic Regression baseline model is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Logistic Regression baseline model makes trade-offs transparent.
+#### Artifact Spotlight — Random Forest challenger analysis
+The challenger shows what uplift is possible if the business later chooses more complex models.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The challenger shows what uplift is possible if the business later chooses more complex models.
+  Executives can quote Random Forest challenger analysis when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Random Forest challenger analysis to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Random Forest challenger analysis is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Random Forest challenger analysis.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Random Forest challenger analysis maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Random Forest challenger analysis outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Random Forest challenger analysis, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Random Forest challenger analysis to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Random Forest challenger analysis aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Random Forest challenger analysis.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Random Forest challenger analysis is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Random Forest challenger analysis when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Random Forest challenger analysis is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Random Forest challenger analysis makes trade-offs transparent.
+#### Artifact Spotlight — Class-weight configuration
+Weights rebalance the dataset so that the model respects the importance of fraud cases.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Weights rebalance the dataset so that the model respects the importance of fraud cases.
+  Executives can quote Class-weight configuration when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Class-weight configuration to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Class-weight configuration is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Class-weight configuration.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Class-weight configuration maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Class-weight configuration outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Class-weight configuration, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Class-weight configuration to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Class-weight configuration aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Class-weight configuration.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Class-weight configuration is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Class-weight configuration when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Class-weight configuration is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Class-weight configuration makes trade-offs transparent.
+#### Artifact Spotlight — train_test_split with stratification
+The stratified split guarantees that all discussions are grounded on comparable class ratios.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The stratified split guarantees that all discussions are grounded on comparable class ratios.
+  Executives can quote train_test_split with stratification when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use train_test_split with stratification to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because train_test_split with stratification is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by train_test_split with stratification.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because train_test_split with stratification maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed train_test_split with stratification outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing train_test_split with stratification, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference train_test_split with stratification to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because train_test_split with stratification aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing train_test_split with stratification.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because train_test_split with stratification is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite train_test_split with stratification when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because train_test_split with stratification is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because train_test_split with stratification makes trade-offs transparent.
+#### Artifact Spotlight — Threshold calibration workflow
+Calibration ties model math to the number of alerts that operations can realistically review.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Calibration ties model math to the number of alerts that operations can realistically review.
+  Executives can quote Threshold calibration workflow when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Threshold calibration workflow to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Threshold calibration workflow is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Threshold calibration workflow.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Threshold calibration workflow maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Threshold calibration workflow outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Threshold calibration workflow, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Threshold calibration workflow to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Threshold calibration workflow aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Threshold calibration workflow.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Threshold calibration workflow is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Threshold calibration workflow when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Threshold calibration workflow is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Threshold calibration workflow makes trade-offs transparent.
+#### Artifact Spotlight — Precision-Recall curve output
+The PR curve pinpoints how much incremental loss savings the business can purchase with more staffing.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The PR curve pinpoints how much incremental loss savings the business can purchase with more staffing.
+  Executives can quote Precision-Recall curve output when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Precision-Recall curve output to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Precision-Recall curve output is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Precision-Recall curve output.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Precision-Recall curve output maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Precision-Recall curve output outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Precision-Recall curve output, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Precision-Recall curve output to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Precision-Recall curve output aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Precision-Recall curve output.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Precision-Recall curve output is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Precision-Recall curve output when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Precision-Recall curve output is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Precision-Recall curve output makes trade-offs transparent.
+#### Artifact Spotlight — ROC curve output
+The ROC curve is still a board-level KPI and signals overall separability.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The ROC curve is still a board-level KPI and signals overall separability.
+  Executives can quote ROC curve output when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use ROC curve output to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because ROC curve output is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by ROC curve output.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because ROC curve output maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed ROC curve output outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing ROC curve output, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference ROC curve output to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because ROC curve output aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing ROC curve output.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because ROC curve output is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite ROC curve output when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because ROC curve output is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because ROC curve output makes trade-offs transparent.
+#### Artifact Spotlight — Confusion matrix heatmap
+This visual lets leaders point to specific error counts without reading code.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This visual lets leaders point to specific error counts without reading code.
+  Executives can quote Confusion matrix heatmap when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Confusion matrix heatmap to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Confusion matrix heatmap is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Confusion matrix heatmap.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Confusion matrix heatmap maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Confusion matrix heatmap outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Confusion matrix heatmap, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Confusion matrix heatmap to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Confusion matrix heatmap aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Confusion matrix heatmap.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Confusion matrix heatmap is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Confusion matrix heatmap when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Confusion matrix heatmap is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Confusion matrix heatmap makes trade-offs transparent.
+#### Artifact Spotlight — Monitoring checklist in docs/monitoring
+The checklist is the promise that someone is watching the model after go-live.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The checklist is the promise that someone is watching the model after go-live.
+  Executives can quote Monitoring checklist in docs/monitoring when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Monitoring checklist in docs/monitoring to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Monitoring checklist in docs/monitoring is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Monitoring checklist in docs/monitoring.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Monitoring checklist in docs/monitoring maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Monitoring checklist in docs/monitoring outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Monitoring checklist in docs/monitoring, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Monitoring checklist in docs/monitoring to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Monitoring checklist in docs/monitoring aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Monitoring checklist in docs/monitoring.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Monitoring checklist in docs/monitoring is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Monitoring checklist in docs/monitoring when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Monitoring checklist in docs/monitoring is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Monitoring checklist in docs/monitoring makes trade-offs transparent.
+#### Artifact Spotlight — Data retention guidance
+Retention notes prove that sensitive transaction data will not be stored longer than necessary.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Retention notes prove that sensitive transaction data will not be stored longer than necessary.
+  Executives can quote Data retention guidance when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Data retention guidance to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Data retention guidance is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Data retention guidance.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Data retention guidance maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Data retention guidance outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Data retention guidance, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Data retention guidance to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Data retention guidance aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Data retention guidance.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Data retention guidance is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Data retention guidance when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Data retention guidance is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Data retention guidance makes trade-offs transparent.
+#### Artifact Spotlight — Uplift scenario workbook
+Scenario tabs translate statistical deltas into monthly budget variances.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Scenario tabs translate statistical deltas into monthly budget variances.
+  Executives can quote Uplift scenario workbook when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Uplift scenario workbook to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Uplift scenario workbook is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Uplift scenario workbook.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Uplift scenario workbook maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Uplift scenario workbook outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Uplift scenario workbook, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Uplift scenario workbook to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Uplift scenario workbook aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Uplift scenario workbook.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Uplift scenario workbook is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Uplift scenario workbook when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Uplift scenario workbook is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Uplift scenario workbook makes trade-offs transparent.
+#### Artifact Spotlight — Alert volume forecast
+This forecast converts probability distributions into queue sizes.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This forecast converts probability distributions into queue sizes.
+  Executives can quote Alert volume forecast when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Alert volume forecast to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Alert volume forecast is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Alert volume forecast.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Alert volume forecast maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Alert volume forecast outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Alert volume forecast, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Alert volume forecast to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Alert volume forecast aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Alert volume forecast.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Alert volume forecast is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Alert volume forecast when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Alert volume forecast is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Alert volume forecast makes trade-offs transparent.
+#### Artifact Spotlight — Model drift dashboard concept
+The concept describes how executives will learn about shifts before they become losses.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The concept describes how executives will learn about shifts before they become losses.
+  Executives can quote Model drift dashboard concept when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Model drift dashboard concept to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Model drift dashboard concept is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Model drift dashboard concept.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Model drift dashboard concept maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Model drift dashboard concept outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Model drift dashboard concept, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Model drift dashboard concept to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Model drift dashboard concept aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Model drift dashboard concept.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Model drift dashboard concept is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Model drift dashboard concept when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Model drift dashboard concept is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Model drift dashboard concept makes trade-offs transparent.
+#### Artifact Spotlight — Fairness considerations write-up
+Even fraud models must respect customer fairness, and this write-up shows the plan.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Even fraud models must respect customer fairness, and this write-up shows the plan.
+  Executives can quote Fairness considerations write-up when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Fairness considerations write-up to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Fairness considerations write-up is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Fairness considerations write-up.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Fairness considerations write-up maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Fairness considerations write-up outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Fairness considerations write-up, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Fairness considerations write-up to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Fairness considerations write-up aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Fairness considerations write-up.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Fairness considerations write-up is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Fairness considerations write-up when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Fairness considerations write-up is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Fairness considerations write-up makes trade-offs transparent.
+#### Artifact Spotlight — Feature importance ranking
+The ranking becomes the speaking points for risk committee meetings.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The ranking becomes the speaking points for risk committee meetings.
+  Executives can quote Feature importance ranking when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Feature importance ranking to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Feature importance ranking is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Feature importance ranking.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Feature importance ranking maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Feature importance ranking outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Feature importance ranking, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Feature importance ranking to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Feature importance ranking aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Feature importance ranking.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Feature importance ranking is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Feature importance ranking when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Feature importance ranking is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Feature importance ranking makes trade-offs transparent.
+#### Artifact Spotlight — Top contributing components (V1, V4, V12, V14)
+These components act as shorthand for clusters of risky behaviors.
+- **Loss Containment:** It gives leadership a lever to protect revenue because These components act as shorthand for clusters of risky behaviors.
+  Executives can quote Top contributing components (V1, V4, V12, V14) when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Top contributing components (V1, V4, V12, V14) to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Top contributing components (V1, V4, V12, V14) is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Top contributing components (V1, V4, V12, V14).
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Top contributing components (V1, V4, V12, V14) maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Top contributing components (V1, V4, V12, V14) outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Top contributing components (V1, V4, V12, V14), leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Top contributing components (V1, V4, V12, V14) to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Top contributing components (V1, V4, V12, V14) aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Top contributing components (V1, V4, V12, V14).
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Top contributing components (V1, V4, V12, V14) is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Top contributing components (V1, V4, V12, V14) when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Top contributing components (V1, V4, V12, V14) is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Top contributing components (V1, V4, V12, V14) makes trade-offs transparent.
+#### Artifact Spotlight — Transaction Amount feature
+The amount feature links every conversation back to dollars at risk.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The amount feature links every conversation back to dollars at risk.
+  Executives can quote Transaction Amount feature when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Transaction Amount feature to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Transaction Amount feature is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Transaction Amount feature.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Transaction Amount feature maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Transaction Amount feature outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Transaction Amount feature, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Transaction Amount feature to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Transaction Amount feature aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Transaction Amount feature.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Transaction Amount feature is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Transaction Amount feature when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Transaction Amount feature is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Transaction Amount feature makes trade-offs transparent.
+#### Artifact Spotlight — Time-since-beginning feature
+The time variable ensures that cycle-time anomalies are captured.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The time variable ensures that cycle-time anomalies are captured.
+  Executives can quote Time-since-beginning feature when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Time-since-beginning feature to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Time-since-beginning feature is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Time-since-beginning feature.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Time-since-beginning feature maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Time-since-beginning feature outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Time-since-beginning feature, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Time-since-beginning feature to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Time-since-beginning feature aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Time-since-beginning feature.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Time-since-beginning feature is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Time-since-beginning feature when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Time-since-beginning feature is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Time-since-beginning feature makes trade-offs transparent.
+#### Artifact Spotlight — Manual review policy document
+The policy document defines how people respond to the model output.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The policy document defines how people respond to the model output.
+  Executives can quote Manual review policy document when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Manual review policy document to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Manual review policy document is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Manual review policy document.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Manual review policy document maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Manual review policy document outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Manual review policy document, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Manual review policy document to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Manual review policy document aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Manual review policy document.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Manual review policy document is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Manual review policy document when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Manual review policy document is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Manual review policy document makes trade-offs transparent.
+#### Artifact Spotlight — API authentication controls
+Authentication protects the model from misuse, which is a core governance topic.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Authentication protects the model from misuse, which is a core governance topic.
+  Executives can quote API authentication controls when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use API authentication controls to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because API authentication controls is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by API authentication controls.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because API authentication controls maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed API authentication controls outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing API authentication controls, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference API authentication controls to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because API authentication controls aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing API authentication controls.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because API authentication controls is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite API authentication controls when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because API authentication controls is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because API authentication controls makes trade-offs transparent.
+#### Artifact Spotlight — Data quality validator
+The validator promises that corrupted feeds will not silently poison the model.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The validator promises that corrupted feeds will not silently poison the model.
+  Executives can quote Data quality validator when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Data quality validator to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Data quality validator is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Data quality validator.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Data quality validator maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Data quality validator outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Data quality validator, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Data quality validator to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Data quality validator aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Data quality validator.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Data quality validator is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Data quality validator when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Data quality validator is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Data quality validator makes trade-offs transparent.
+#### Artifact Spotlight — Model versioning tags
+Version tags preserve accountability for every release.
+- **Loss Containment:** It gives leadership a lever to protect revenue because Version tags preserve accountability for every release.
+  Executives can quote Model versioning tags when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Model versioning tags to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Model versioning tags is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Model versioning tags.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Model versioning tags maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Model versioning tags outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Model versioning tags, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Model versioning tags to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Model versioning tags aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Model versioning tags.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Model versioning tags is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Model versioning tags when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Model versioning tags is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Model versioning tags makes trade-offs transparent.
+#### Artifact Spotlight — Change management checklist
+This checklist guarantees that business leaders sign off on every material tweak.
+- **Loss Containment:** It gives leadership a lever to protect revenue because This checklist guarantees that business leaders sign off on every material tweak.
+  Executives can quote Change management checklist when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Change management checklist to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Change management checklist is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Change management checklist.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Change management checklist maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Change management checklist outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Change management checklist, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Change management checklist to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Change management checklist aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Change management checklist.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Change management checklist is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Change management checklist when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Change management checklist is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Change management checklist makes trade-offs transparent.
+#### Artifact Spotlight — Communication plan for stakeholders
+The communication plan keeps the fraud narrative synchronized across functions.
+- **Loss Containment:** It gives leadership a lever to protect revenue because The communication plan keeps the fraud narrative synchronized across functions.
+  Executives can quote Communication plan for stakeholders when estimating how many dollars are back under control.
+- **Customer Experience:** It directly links technical behavior to how often legitimate customers are interrupted.
+  Senior leaders can use Communication plan for stakeholders to balance protection with friction.
+- **Regulatory Comfort:** The artifact is clean enough to share with auditors and regulators without translation.
+  Because Communication plan for stakeholders is inspection-ready, it shortens approval cycles.
+- **Operational Efficiency:** The operational narrative around the artifact clarifies who owns each action.
+  Leaders can assign accountability using the same language surfaced by Communication plan for stakeholders.
+- **Staffing Alignment:** The artifact calls out the human workload that follows the model decision.
+  Executives can size review pods because Communication plan for stakeholders maps math to headcount.
+- **Forecast Planning:** It converts fraud risk into numbers that can live inside a financial plan.
+  Finance partners can embed Communication plan for stakeholders outputs into rolling forecasts.
+- **Vendor Negotiations:** The clarity of the artifact equips procurement to challenge third-party fraud-tool proposals.
+  By citing Communication plan for stakeholders, leaders can negotiate from evidence rather than hope.
+- **Scenario Planning:** Different what-if stories can be told quickly because of the structure baked into the artifact.
+  During tabletop exercises, executives can reference Communication plan for stakeholders to keep the group grounded.
+- **KPI Storytelling:** The artifact is a ready-made visual for quarterly business reviews.
+  Boards hear a consistent message because Communication plan for stakeholders aligns terms and numbers.
+- **Investment Governance:** The artifact describes exactly how incremental investment will move the needle.
+  Capital committees can make faster calls after reviewing Communication plan for stakeholders.
+- **Technology Alignment:** It documents the touchpoints between modeling code and enterprise systems.
+  CIO partners understand integration sequencing because Communication plan for stakeholders is explicit.
+- **Risk Appetite Guardrails:** The artifact connects to documented thresholds, so appetite statements stay live.
+  Risk committees can cite Communication plan for stakeholders when re-affirming tolerances.
+- **Partnership Dialogue:** It gives cross-functional partners a neutral reference point for debates.
+  Because Communication plan for stakeholders is specific, disagreements become solvable.
+- **Strategic Optionality:** The artifact keeps future options open by documenting assumptions.
+  Executives can pivot faster because Communication plan for stakeholders makes trade-offs transparent.
+
+---
+## Part B – Educational Tone Narrative for New Practitioners
+
+Part B retells the same story with teaching moments. Each artifact is unpacked like a mini-lesson. The writing style assumes the reader is curious, motivated, but early in their fraud analytics career. The section leans on analogies, definitions, and repeated references to the supporting notebook exports so that the learning curve feels manageable.
+
+### B.1 Learning from the Notebook Visuals
+
+![Class balance learning aid](images/fraud_eda_table_class_balance.png)
+
+Think of this class-balance table as a weather report. It tells you how rare the fraud storm is before you step outside. Without it, you might bring the wrong umbrella.
+
+![Summary stats learning aid](images/fraud_eda_table_summary_stats.png)
+
+Summary statistics are like a cockpit dashboard. Each dial shows how big or volatile a feature is so that you do not overreact to noisy values.
+
+![Best threshold learning aid](images/fraud_eda_table_best_threshold.png)
+
+Threshold tables are training wheels. They remind you that a threshold is not just a number; it is a promise about how many alerts you are asking your teammates to review.
+
+![Confusion matrix learning aid](images/fraud_eda_table_confusion_matrix.png)
+
+Confusion matrices are the equivalent of a report card. They give you the count of right and wrong answers so you can celebrate and improve.
+
+![Top hour learning aid](images/fraud_eda_table_top_hours.png)
+
+Hour concentration tables show the rhythm of fraud attempts. They make it obvious why fraud strategy teams still talk about night-shift patterns.
+
+![Amount distribution learning aid](images/fraud_eda_chart_01.png)
+
+The overlapping distribution chart is a story about money. By staring at it you learn that most legitimate transactions are modest, while fraudulent ones creep into the high-dollar zone.
+
+### B.2 Friendly Guide Table
+
+| Technical Artifact | What It Means in Plain English | Business Story You Can Tell | Where to See It |
+| --- | --- | --- | --- |
+| `notebooks/fraud_eda.ipynb` | A guided journal containing every experiment we ran. | "We kept notes and charts so every idea is traceable." | Notebook markdown headings. |
+| `docs/images/fraud_eda_table_summary_stats.png` | A freeze-frame of key statistics. | "Our testing ground looked like this." | Evidence pack screenshot. |
+| `docs/images/fraud_eda_table_best_threshold.png` | A calculator that pairs recall with workload. | "If we tighten the net, here is how many cases we must review." | Notebook cell export. |
+| `apps/react/frontend/src/pages/FraudThresholdExplorer.jsx` | The webpage that lets you drag a slider and see results. | "You can tune precision vs. recall without code." | React UI repository. |
+| `apps/react/backend/main.py` | The API door where other systems knock to get scores. | "This is how the model speaks to the rest of the company." | FastAPI docs route. |
+| `docs/images/fraud_eda_table_confusion_matrix.png` | A grid of right vs wrong predictions. | "Here is the scoreboard for the validation day." | Notebook export. |
+
+### B.3 Teaching Notes per Artifact
+
+The remainder of Part B treats each artifact like a chapter. Every block answers four questions: What is it? Why does it exist? How does it reduce fraud losses? How can a new analyst apply the idea tomorrow?
+
+#### Learning Chapter — notebooks/fraud_eda.ipynb
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining notebooks/fraud_eda.ipynb to a friend. This notebook organizes the entire exploratory analysis journey, from data import to chart exports.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_table_summary_stats.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_table_summary_stats.png to a friend. This static table turns raw descriptive statistics into a page executives can absorb in seconds.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_table_class_balance.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_table_class_balance.png to a friend. This table is the fast proof that fraud really is a needle-in-a-haystack problem.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_table_best_threshold.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_table_best_threshold.png to a friend. This artifact shows the precise probability cutoffs that were tested and the workloads that follow.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_table_confusion_matrix.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_table_confusion_matrix.png to a friend. This is the raw count of true/false positives and negatives from the validation set.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_table_top_hours.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_table_top_hours.png to a friend. This exported table captures when fraudsters prefer to test the perimeter.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — docs/images/fraud_eda_chart_01.png
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining docs/images/fraud_eda_chart_01.png to a friend. This chart overlays spend amounts for safe and fraudulent transactions to highlight value at risk.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — apps/react/frontend/src/pages/FraudThresholdExplorer.jsx
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining apps/react/frontend/src/pages/FraudThresholdExplorer.jsx to a friend. The threshold explorer UI is the hands-on control panel for operations leaders.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — apps/react/backend/main.py
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining apps/react/backend/main.py to a friend. The FastAPI entry point demonstrates how predictions are packaged and served to enterprise systems.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — scripts/make_sample_slices.py
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining scripts/make_sample_slices.py to a friend. This script produces lightweight files for demos so that stakeholders can validate scenarios.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — StandardScaler preprocessing step
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining StandardScaler preprocessing step to a friend. Scaling keeps the model stable, which in business terms means fewer surprise jumps in alert counts.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Logistic Regression baseline model
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Logistic Regression baseline model to a friend. The logistic regression coefficients provide the transparent math that regulators prefer.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Random Forest challenger analysis
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Random Forest challenger analysis to a friend. The challenger shows what uplift is possible if the business later chooses more complex models.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Class-weight configuration
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Class-weight configuration to a friend. Weights rebalance the dataset so that the model respects the importance of fraud cases.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — train_test_split with stratification
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining train_test_split with stratification to a friend. The stratified split guarantees that all discussions are grounded on comparable class ratios.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Threshold calibration workflow
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Threshold calibration workflow to a friend. Calibration ties model math to the number of alerts that operations can realistically review.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Precision-Recall curve output
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Precision-Recall curve output to a friend. The PR curve pinpoints how much incremental loss savings the business can purchase with more staffing.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — ROC curve output
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining ROC curve output to a friend. The ROC curve is still a board-level KPI and signals overall separability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Confusion matrix heatmap
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Confusion matrix heatmap to a friend. This visual lets leaders point to specific error counts without reading code.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Monitoring checklist in docs/monitoring
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Monitoring checklist in docs/monitoring to a friend. The checklist is the promise that someone is watching the model after go-live.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Data retention guidance
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Data retention guidance to a friend. Retention notes prove that sensitive transaction data will not be stored longer than necessary.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Uplift scenario workbook
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Uplift scenario workbook to a friend. Scenario tabs translate statistical deltas into monthly budget variances.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Alert volume forecast
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Alert volume forecast to a friend. This forecast converts probability distributions into queue sizes.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Model drift dashboard concept
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Model drift dashboard concept to a friend. The concept describes how executives will learn about shifts before they become losses.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Fairness considerations write-up
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Fairness considerations write-up to a friend. Even fraud models must respect customer fairness, and this write-up shows the plan.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Feature importance ranking
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Feature importance ranking to a friend. The ranking becomes the speaking points for risk committee meetings.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Top contributing components (V1, V4, V12, V14)
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Top contributing components (V1, V4, V12, V14) to a friend. These components act as shorthand for clusters of risky behaviors.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Transaction Amount feature
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Transaction Amount feature to a friend. The amount feature links every conversation back to dollars at risk.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Time-since-beginning feature
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Time-since-beginning feature to a friend. The time variable ensures that cycle-time anomalies are captured.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Manual review policy document
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Manual review policy document to a friend. The policy document defines how people respond to the model output.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — API authentication controls
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining API authentication controls to a friend. Authentication protects the model from misuse, which is a core governance topic.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Data quality validator
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Data quality validator to a friend. The validator promises that corrupted feeds will not silently poison the model.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Model versioning tags
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Model versioning tags to a friend. Version tags preserve accountability for every release.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Change management checklist
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Change management checklist to a friend. This checklist guarantees that business leaders sign off on every material tweak.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+#### Learning Chapter — Communication plan for stakeholders
+This chapter builds intuition about the artifact before diving into code.
+- **Definition:** Imagine explaining Communication plan for stakeholders to a friend. The communication plan keeps the fraud narrative synchronized across functions.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Reason It Exists:** It exists because fraud fighting needs dependable building blocks, and this one delivers that dependability.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Business Link:** When you put it in play, business partners can see how fraud risk becomes either cheaper or easier to manage.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Hands-On Practice:** Try recreating the artifact on a smaller sample so you understand every moving part.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Questions to Ask:** Ask yourself who relies on this artifact during a busy fraud weekend and what would happen if it vanished.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Storytelling Tip:** Frame the artifact as a story about protecting cardmembers rather than a math lecture.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Collaboration Hint:** Use the artifact to invite conversations with operations, finance, or compliance.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Measurement Reminder:** Tie the artifact to a metric so you can describe its success in numbers.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Maintenance Watch:** Think ahead about how you will know the artifact is drifting or becoming stale.
+  Keep notes on what surprised you so you can mentor the next analyst.
+- **Upgrade Path:** Document how you would extend or automate the artifact once the program scales.
+  Keep notes on what surprised you so you can mentor the next analyst.
+
+
+### B.4 Practice Prompts for Learners
+
+The teaching tone would not be complete without homework-style prompts. Each prompt below references one of the artifacts discussed above and nudges the reader to connect the dots between technical diligence and business outcomes.
+
+- **Prompt 1:** Recreate the class-balance table inside a fresh notebook and explain to a teammate why the tiny fraud rate changes how we think about staffing.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 2:** Annotate the summary statistics table with sticky notes that highlight which metrics point to revenue exposure versus customer-experience nuances.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 3:** Use the threshold explorer UI and record how the precision and recall numbers change as you slide the control by 0.0005 increments.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 4:** Write a short memo describing how the FastAPI endpoint would be reviewed by the security team before it goes to production.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 5:** Sketch the monitoring checklist on a whiteboard and place initials next to each task so ownership is unmistakable.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 6:** Convert the confusion matrix into a storyboard that shows what happens to customers and the company in each quadrant.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 7:** Take the top-hour chart and brainstorm marketing or communication tactics that align customer expectations with fraud spikes.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 8:** Pair up with an operations colleague to see how they interpret the alert volume forecast and whether the math matches their lived experience.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 9:** Explain StandardScaler to a non-technical friend using the idea of translating currencies before comparing prices.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 10:** Simulate a drift scenario where the PCA components shift and document how you would raise the alarm through the communication plan.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 11:** Build a mini version of the uplift scenario workbook with only 100 transactions so you understand every formula.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 12:** Walk through the change-management checklist and note any control gaps that would worry an auditor.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 13:** Compare the logistic regression baseline to the random forest challenger and list the trade-offs you would highlight to the risk committee.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 14:** Develop a fairness testing outline even if the dataset lacks demographics so that you build the habit of checking for bias.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 15:** Role-play a vendor negotiation where you cite evidence from the artifact table to justify in-house investments.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 16:** Narrate the precision-recall curve as if you were presenting to a board that has never heard of the metric.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 17:** Design a socialization plan that introduces the threshold explorer UI to regional operations managers step by step.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 18:** Create a list of questions you would ask the data engineering team after reading the data retention guidance.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 19:** Summarize each feature importance driver in one sentence that mentions a real-world customer behavior.
+  Jot down your observations and how they would influence an executive briefing.
+- **Prompt 20:** Draft a small FAQ for customer-facing teams explaining how the fraud model supports, rather than hinders, legitimate spend.
+  Jot down your observations and how they would influence an executive briefing.
+
+
+### B.5 Extended Practice Bank
+
+Learners who want additional repetition can walk through the extended prompt bank below. The numbering continues so that mentors can reference a specific exercise during office hours or study groups.
+
+- **Prompt 21:** Pretend you are briefing the CFO and use the artifact table to back up every assertion you make.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 22:** Redraw the amount distribution chart by hand to understand how log scaling reveals hidden fraud cases.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 23:** Update the alert volume forecast using a hypothetical increase in e-commerce traffic and discuss the downstream budget impact.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 24:** Mock up a service ticket that explains why authentication controls are non-negotiable for the scoring API.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 25:** Brainstorm how the manual review policy document should evolve if the recall target increases to ninety percent.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 26:** Create a checklist for what to test after every data pipeline change so that the data quality validator always runs.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 27:** Describe in a paragraph how model versioning tags support audit readiness during a regulatory exam.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 28:** Interview someone from customer care and ask which parts of the communication plan resonate the most with their scripts.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 29:** Write a summary comparing the time-since-beginning feature to seasonality indicators from other portfolios.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 30:** List the operational risks that would surface if the class-weight configuration were accidentally removed.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 31:** Translate the monitoring checklist into a RACI chart to make sure ownership is visible.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 32:** Document how you would rehearse an incident response drill that starts with a drift alert on the dashboard concept.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 33:** Map the feature-importance ranking to real merchant behaviors so leaders can imagine the fraudster tactics involved.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 34:** Design a lunch-and-learn presentation that walks through the Random Forest challenger without overwhelming non-technical staff.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 35:** Explain how uplift scenario workbooks make it easier to justify overtime or temporary contractors during peak fraud seasons.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 36:** Draft a question bank for risk committee members who want to probe deeper into the logistic regression coefficients.
+  Capture the answer in writing so that future teammates can reuse your insight.
+- **Prompt 37:** Create an internal blog post that demystifies threshold calibration by connecting it to everyday decision-making scenarios.
+  Capture the answer in writing so that future teammates can reuse your insight.
