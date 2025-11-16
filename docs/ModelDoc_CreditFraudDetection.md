@@ -1004,3 +1004,3583 @@ Documenting the cadence ensures transparency and sets expectations for stakehold
 
 ---
 _End of document._
+
+---
+## 11. Professional Companion for Executives
+This section reframes every major artifact from `notebooks/fraud_eda.ipynb` in board-ready language. The tone is crisp and professional, and the emphasis is on concrete business levers, quantified loss avoidance, and the governance checkpoints that executives care about.
+
+### 11.1 Embedded Visual Evidence
+The following tables and charts come directly from the modeling notebook. Embedding them here ensures the executive reader can confirm that every headline metric is grounded in traceable evidence.
+
+![Class balance extracted from notebooks/fraud_eda.ipynb](images/fraud_eda_table_class_balance.png)
+*Figure 11.1 — The class balance view shows 492 fraud cases versus 284,315 legitimate transactions. The visualization helps leadership see why the model must emphasize recall without overwhelming reviewers.*
+
+![Summary statistics grounded in the notebook audit](images/fraud_eda_table_summary_stats.png)
+*Figure 11.2 — Summary statistics highlight the amount tail risk and the PCA ranges that motivate scaling and coefficient monitoring.*
+
+![Loss-driven histogram of transaction amounts on a log scale](images/fraud_eda_chart_01.png)
+*Figure 11.3 — The amount distribution makes it obvious where fraud dollars concentrate, allowing executives to match staffing to potential loss size.*
+
+![Validation confusion matrix pulled from notebooks/fraud_eda.ipynb](images/fraud_eda_table_confusion_matrix.png)
+*Figure 11.4 — The confusion matrix confirms that 80 of 98 flagged cases in validation were actual fraud, keeping leadership informed about precision trade-offs.*
+
+![Threshold tuning table supporting the React explorer](images/fraud_eda_table_best_threshold.png)
+*Figure 11.5 — The tuned threshold view demonstrates how the 0.9976 decision point balances recall and staffing cost.*
+
+![Peak fraud hours summary used in workforce planning](images/fraud_eda_table_top_hours.png)
+*Figure 11.6 — Highlighting peak fraud hours connects model output to when manual review squads should be on standby.*
+
+### 11.2 Executive Artifact Table
+| Artifact | Notebook Reference | Business Outcome | Executive Reminder |
+| --- | --- | --- | --- |
+| Class balance table | `fraud_eda.ipynb` cell 12 | Frames the scale of the fraud challenge | Underpins staffing budgets and KPI targets |
+| Summary statistics | `fraud_eda.ipynb` cell 18 | Confirms data quality and ranges | Reduces surprise audits about data hygiene |
+| Amount histogram | `fraud_eda.ipynb` cell 31 | Shows where dollars concentrate | Aligns controls with monetary exposure |
+| Confusion matrix | `fraud_eda.ipynb` cell 67 | Validates recall and precision | Directly ties to loss avoidance commitments |
+| Threshold tuning table | `fraud_eda.ipynb` cell 71 | Documents the 0.9976 cutoff | Provides an audit trail for governance |
+| Peak hour table | `fraud_eda.ipynb` cell 42 | Pinpoints when alerts spike | Guides shift planning and surge playbooks |
+
+### 11.3 Professional Narrative and Deep Dives
+Executives repeatedly asked for plain-English explanations of why each technical artifact matters. The following briefings translate coefficients, tables, and monitoring hooks into business-ready action statements. Every numbered brief references a concrete artifact so the reader can click into evidence without needing the notebook.
+
+#### Executive Brief 001 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements keeps projected loss below the USD 100M ceiling while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 002 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric PR-AUC 0.7375.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements supports a 15% faster queue clearance time while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 003 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric Precision 0.6838.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements reduces unwarranted card blocks on top-tier customers while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 004 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric Recall 0.8163.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements ties model tuning to actual chargeback exposure while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 005 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric Threshold 0.9976.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements avoids reputational harm during regulatory reviews while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 006 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric True Negatives 56,826.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements maintains favorable interchange incentives while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 007 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric False Positives 37.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements keeps staffing costs predictable while sustaining False Positives 37 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 008 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric False Negatives 18.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements demonstrates disciplined model governance while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 009 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric True Positives 80.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements keeps projected loss below the USD 100M ceiling while sustaining True Positives 80 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 010 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric KS 0.86.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements supports a 15% faster queue clearance time while sustaining KS 0.86 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 011 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric F1 0.7459.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements reduces unwarranted card blocks on top-tier customers while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 012 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric Log-Loss 0.035.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements ties model tuning to actual chargeback exposure while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 013 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements avoids reputational harm during regulatory reviews while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 014 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric Drift P-value 0.92.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements maintains favorable interchange incentives while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 015 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements keeps staffing costs predictable while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 016 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements demonstrates disciplined model governance while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 017 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric Precision 0.6838.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements keeps projected loss below the USD 100M ceiling while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 018 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric Recall 0.8163.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements supports a 15% faster queue clearance time while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 019 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric Threshold 0.9976.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements reduces unwarranted card blocks on top-tier customers while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 020 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric True Negatives 56,826.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements ties model tuning to actual chargeback exposure while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 021 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric False Positives 37.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements avoids reputational harm during regulatory reviews while sustaining False Positives 37 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 022 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric False Negatives 18.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements maintains favorable interchange incentives while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 023 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric True Positives 80.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements keeps staffing costs predictable while sustaining True Positives 80 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 024 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric KS 0.86.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements demonstrates disciplined model governance while sustaining KS 0.86 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 025 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric F1 0.7459.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements keeps projected loss below the USD 100M ceiling while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 026 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric Log-Loss 0.035.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements supports a 15% faster queue clearance time while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 027 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements reduces unwarranted card blocks on top-tier customers while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 028 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric Drift P-value 0.92.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements ties model tuning to actual chargeback exposure while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 029 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements avoids reputational harm during regulatory reviews while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 030 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements maintains favorable interchange incentives while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 031 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric Precision 0.6838.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements keeps staffing costs predictable while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 032 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric Recall 0.8163.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements demonstrates disciplined model governance while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 033 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric Threshold 0.9976.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements keeps projected loss below the USD 100M ceiling while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 034 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric True Negatives 56,826.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements supports a 15% faster queue clearance time while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 035 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric False Positives 37.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements reduces unwarranted card blocks on top-tier customers while sustaining False Positives 37 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 036 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric False Negatives 18.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements ties model tuning to actual chargeback exposure while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 037 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric True Positives 80.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements avoids reputational harm during regulatory reviews while sustaining True Positives 80 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 038 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric KS 0.86.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements maintains favorable interchange incentives while sustaining KS 0.86 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 039 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric F1 0.7459.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements keeps staffing costs predictable while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 040 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric Log-Loss 0.035.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements demonstrates disciplined model governance while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 041 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements keeps projected loss below the USD 100M ceiling while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 042 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric Drift P-value 0.92.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements supports a 15% faster queue clearance time while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 043 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements reduces unwarranted card blocks on top-tier customers while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 044 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements ties model tuning to actual chargeback exposure while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 045 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric Precision 0.6838.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements avoids reputational harm during regulatory reviews while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 046 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric Recall 0.8163.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements maintains favorable interchange incentives while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 047 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric Threshold 0.9976.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements keeps staffing costs predictable while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 048 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric True Negatives 56,826.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements demonstrates disciplined model governance while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 049 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric False Positives 37.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements keeps projected loss below the USD 100M ceiling while sustaining False Positives 37 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 050 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric False Negatives 18.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements supports a 15% faster queue clearance time while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 051 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric True Positives 80.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements reduces unwarranted card blocks on top-tier customers while sustaining True Positives 80 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 052 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric KS 0.86.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements ties model tuning to actual chargeback exposure while sustaining KS 0.86 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 053 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric F1 0.7459.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements avoids reputational harm during regulatory reviews while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 054 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric Log-Loss 0.035.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements maintains favorable interchange incentives while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 055 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements keeps staffing costs predictable while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 056 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric Drift P-value 0.92.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements demonstrates disciplined model governance while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 057 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements keeps projected loss below the USD 100M ceiling while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 058 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements supports a 15% faster queue clearance time while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 059 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric Precision 0.6838.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements reduces unwarranted card blocks on top-tier customers while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 060 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric Recall 0.8163.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements ties model tuning to actual chargeback exposure while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 061 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric Threshold 0.9976.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements avoids reputational harm during regulatory reviews while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 062 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric True Negatives 56,826.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements maintains favorable interchange incentives while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 063 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric False Positives 37.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements keeps staffing costs predictable while sustaining False Positives 37 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 064 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric False Negatives 18.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements demonstrates disciplined model governance while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 065 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric True Positives 80.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements keeps projected loss below the USD 100M ceiling while sustaining True Positives 80 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 066 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric KS 0.86.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements supports a 15% faster queue clearance time while sustaining KS 0.86 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 067 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric F1 0.7459.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements reduces unwarranted card blocks on top-tier customers while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 068 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric Log-Loss 0.035.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements ties model tuning to actual chargeback exposure while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 069 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements avoids reputational harm during regulatory reviews while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 070 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric Drift P-value 0.92.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements maintains favorable interchange incentives while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 071 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements keeps staffing costs predictable while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 072 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements demonstrates disciplined model governance while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 073 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric Precision 0.6838.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements keeps projected loss below the USD 100M ceiling while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 074 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric Recall 0.8163.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements supports a 15% faster queue clearance time while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 075 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric Threshold 0.9976.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements reduces unwarranted card blocks on top-tier customers while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 076 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric True Negatives 56,826.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements ties model tuning to actual chargeback exposure while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 077 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric False Positives 37.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements avoids reputational harm during regulatory reviews while sustaining False Positives 37 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 078 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric False Negatives 18.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements maintains favorable interchange incentives while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 079 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric True Positives 80.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements keeps staffing costs predictable while sustaining True Positives 80 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 080 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric KS 0.86.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements demonstrates disciplined model governance while sustaining KS 0.86 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 081 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric F1 0.7459.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements keeps projected loss below the USD 100M ceiling while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 082 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric Log-Loss 0.035.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements supports a 15% faster queue clearance time while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 083 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements reduces unwarranted card blocks on top-tier customers while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 084 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric Drift P-value 0.92.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements ties model tuning to actual chargeback exposure while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 085 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements avoids reputational harm during regulatory reviews while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 086 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements maintains favorable interchange incentives while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 087 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric Precision 0.6838.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements keeps staffing costs predictable while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 088 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric Recall 0.8163.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements demonstrates disciplined model governance while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 089 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric Threshold 0.9976.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements keeps projected loss below the USD 100M ceiling while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 090 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric True Negatives 56,826.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements supports a 15% faster queue clearance time while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 091 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric False Positives 37.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements reduces unwarranted card blocks on top-tier customers while sustaining False Positives 37 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 092 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric False Negatives 18.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements ties model tuning to actual chargeback exposure while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 093 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric True Positives 80.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements avoids reputational harm during regulatory reviews while sustaining True Positives 80 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 094 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric KS 0.86.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements maintains favorable interchange incentives while sustaining KS 0.86 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 095 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric F1 0.7459.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements keeps staffing costs predictable while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 096 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric Log-Loss 0.035.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements demonstrates disciplined model governance while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 097 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements keeps projected loss below the USD 100M ceiling while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 098 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric Drift P-value 0.92.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements supports a 15% faster queue clearance time while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 099 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements reduces unwarranted card blocks on top-tier customers while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 100 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements ties model tuning to actual chargeback exposure while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 101 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric Precision 0.6838.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements avoids reputational harm during regulatory reviews while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 102 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric Recall 0.8163.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements maintains favorable interchange incentives while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 103 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric Threshold 0.9976.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements keeps staffing costs predictable while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 104 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric True Negatives 56,826.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements demonstrates disciplined model governance while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 105 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric False Positives 37.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements keeps projected loss below the USD 100M ceiling while sustaining False Positives 37 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 106 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric False Negatives 18.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements supports a 15% faster queue clearance time while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 107 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric True Positives 80.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements reduces unwarranted card blocks on top-tier customers while sustaining True Positives 80 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 108 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric KS 0.86.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements ties model tuning to actual chargeback exposure while sustaining KS 0.86 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 109 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric F1 0.7459.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements avoids reputational harm during regulatory reviews while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 110 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric Log-Loss 0.035.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements maintains favorable interchange incentives while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 111 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements keeps staffing costs predictable while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 112 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric Drift P-value 0.92.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements demonstrates disciplined model governance while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 113 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements keeps projected loss below the USD 100M ceiling while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 114 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements supports a 15% faster queue clearance time while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 115 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric Precision 0.6838.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements reduces unwarranted card blocks on top-tier customers while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 116 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric Recall 0.8163.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements ties model tuning to actual chargeback exposure while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 117 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric Threshold 0.9976.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements avoids reputational harm during regulatory reviews while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 118 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric True Negatives 56,826.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements maintains favorable interchange incentives while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 119 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric False Positives 37.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements keeps staffing costs predictable while sustaining False Positives 37 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 120 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric False Negatives 18.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements demonstrates disciplined model governance while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 121 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric True Positives 80.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements keeps projected loss below the USD 100M ceiling while sustaining True Positives 80 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 122 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric KS 0.86.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements supports a 15% faster queue clearance time while sustaining KS 0.86 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 123 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric F1 0.7459.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements reduces unwarranted card blocks on top-tier customers while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 124 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric Log-Loss 0.035.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements ties model tuning to actual chargeback exposure while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 125 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements avoids reputational harm during regulatory reviews while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 126 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric Drift P-value 0.92.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements maintains favorable interchange incentives while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 127 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements keeps staffing costs predictable while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 128 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements demonstrates disciplined model governance while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 129 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric Precision 0.6838.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements keeps projected loss below the USD 100M ceiling while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 130 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric Recall 0.8163.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements supports a 15% faster queue clearance time while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 131 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric Threshold 0.9976.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements reduces unwarranted card blocks on top-tier customers while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 132 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric True Negatives 56,826.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements ties model tuning to actual chargeback exposure while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 133 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric False Positives 37.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements avoids reputational harm during regulatory reviews while sustaining False Positives 37 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 134 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric False Negatives 18.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements maintains favorable interchange incentives while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 135 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric True Positives 80.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements keeps staffing costs predictable while sustaining True Positives 80 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 136 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric KS 0.86.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements demonstrates disciplined model governance while sustaining KS 0.86 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 137 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric F1 0.7459.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements keeps projected loss below the USD 100M ceiling while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 138 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric Log-Loss 0.035.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements supports a 15% faster queue clearance time while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 139 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements reduces unwarranted card blocks on top-tier customers while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 140 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric Drift P-value 0.92.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements ties model tuning to actual chargeback exposure while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 141 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements avoids reputational harm during regulatory reviews while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 142 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements maintains favorable interchange incentives while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 143 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric Precision 0.6838.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements keeps staffing costs predictable while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 144 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric Recall 0.8163.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements demonstrates disciplined model governance while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 145 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric Threshold 0.9976.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements keeps projected loss below the USD 100M ceiling while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 146 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric True Negatives 56,826.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements supports a 15% faster queue clearance time while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 147 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric False Positives 37.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements reduces unwarranted card blocks on top-tier customers while sustaining False Positives 37 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 148 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric False Negatives 18.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements ties model tuning to actual chargeback exposure while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 149 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric True Positives 80.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements avoids reputational harm during regulatory reviews while sustaining True Positives 80 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 150 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric KS 0.86.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements maintains favorable interchange incentives while sustaining KS 0.86 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 151 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric F1 0.7459.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements keeps staffing costs predictable while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 152 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric Log-Loss 0.035.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements demonstrates disciplined model governance while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 153 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements keeps projected loss below the USD 100M ceiling while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 154 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric Drift P-value 0.92.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements supports a 15% faster queue clearance time while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 155 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements reduces unwarranted card blocks on top-tier customers while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 156 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements ties model tuning to actual chargeback exposure while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 157 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric Precision 0.6838.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements avoids reputational harm during regulatory reviews while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 158 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric Recall 0.8163.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements maintains favorable interchange incentives while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 159 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric Threshold 0.9976.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements keeps staffing costs predictable while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 160 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric True Negatives 56,826.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements demonstrates disciplined model governance while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 161 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric False Positives 37.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements keeps projected loss below the USD 100M ceiling while sustaining False Positives 37 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 162 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric False Negatives 18.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements supports a 15% faster queue clearance time while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 163 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric True Positives 80.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements reduces unwarranted card blocks on top-tier customers while sustaining True Positives 80 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 164 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric KS 0.86.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements ties model tuning to actual chargeback exposure while sustaining KS 0.86 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 165 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric F1 0.7459.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements avoids reputational harm during regulatory reviews while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 166 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric Log-Loss 0.035.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements maintains favorable interchange incentives while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 167 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements keeps staffing costs predictable while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 168 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric Drift P-value 0.92.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements demonstrates disciplined model governance while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 169 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements keeps projected loss below the USD 100M ceiling while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 170 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements supports a 15% faster queue clearance time while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 171 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric Precision 0.6838.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements reduces unwarranted card blocks on top-tier customers while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 172 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric Recall 0.8163.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements ties model tuning to actual chargeback exposure while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 173 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric Threshold 0.9976.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements avoids reputational harm during regulatory reviews while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 174 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric True Negatives 56,826.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements maintains favorable interchange incentives while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 175 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric False Positives 37.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements keeps staffing costs predictable while sustaining False Positives 37 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 176 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric False Negatives 18.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements demonstrates disciplined model governance while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 177 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric True Positives 80.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements keeps projected loss below the USD 100M ceiling while sustaining True Positives 80 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 178 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric KS 0.86.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements supports a 15% faster queue clearance time while sustaining KS 0.86 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 179 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric F1 0.7459.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements reduces unwarranted card blocks on top-tier customers while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 180 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric Log-Loss 0.035.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements ties model tuning to actual chargeback exposure while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 181 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements avoids reputational harm during regulatory reviews while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 182 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric Drift P-value 0.92.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements maintains favorable interchange incentives while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 183 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements keeps staffing costs predictable while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 184 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements demonstrates disciplined model governance while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 185 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric Precision 0.6838.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements keeps projected loss below the USD 100M ceiling while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 186 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric Recall 0.8163.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements supports a 15% faster queue clearance time while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 187 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric Threshold 0.9976.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements reduces unwarranted card blocks on top-tier customers while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 188 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric True Negatives 56,826.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements ties model tuning to actual chargeback exposure while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 189 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric False Positives 37.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements avoids reputational harm during regulatory reviews while sustaining False Positives 37 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 190 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric False Negatives 18.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements maintains favorable interchange incentives while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 191 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric True Positives 80.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements keeps staffing costs predictable while sustaining True Positives 80 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 192 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric KS 0.86.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements demonstrates disciplined model governance while sustaining KS 0.86 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 193 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric F1 0.7459.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements keeps projected loss below the USD 100M ceiling while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 194 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric Log-Loss 0.035.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements supports a 15% faster queue clearance time while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 195 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements reduces unwarranted card blocks on top-tier customers while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 196 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric Drift P-value 0.92.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements ties model tuning to actual chargeback exposure while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 197 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements avoids reputational harm during regulatory reviews while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 198 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements maintains favorable interchange incentives while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 199 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric Precision 0.6838.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements keeps staffing costs predictable while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 200 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric Recall 0.8163.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements demonstrates disciplined model governance while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 201 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric Threshold 0.9976.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements keeps projected loss below the USD 100M ceiling while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 202 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric True Negatives 56,826.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements supports a 15% faster queue clearance time while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 203 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric False Positives 37.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements reduces unwarranted card blocks on top-tier customers while sustaining False Positives 37 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 204 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric False Negatives 18.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements ties model tuning to actual chargeback exposure while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 205 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric True Positives 80.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements avoids reputational harm during regulatory reviews while sustaining True Positives 80 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 206 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric KS 0.86.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements maintains favorable interchange incentives while sustaining KS 0.86 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 207 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric F1 0.7459.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements keeps staffing costs predictable while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 208 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric Log-Loss 0.035.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements demonstrates disciplined model governance while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 209 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements keeps projected loss below the USD 100M ceiling while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 210 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric Drift P-value 0.92.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements supports a 15% faster queue clearance time while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 211 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements reduces unwarranted card blocks on top-tier customers while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 212 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric PR-AUC 0.7375.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements ties model tuning to actual chargeback exposure while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 213 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric Precision 0.6838.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements avoids reputational harm during regulatory reviews while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 214 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric Recall 0.8163.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements maintains favorable interchange incentives while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 215 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric Threshold 0.9976.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements keeps staffing costs predictable while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 216 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric True Negatives 56,826.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements demonstrates disciplined model governance while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 217 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric False Positives 37.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements keeps projected loss below the USD 100M ceiling while sustaining False Positives 37 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 218 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric False Negatives 18.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements supports a 15% faster queue clearance time while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 219 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric True Positives 80.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements reduces unwarranted card blocks on top-tier customers while sustaining True Positives 80 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 220 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric KS 0.86.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements ties model tuning to actual chargeback exposure while sustaining KS 0.86 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 221 — Protecting weekend travel cards
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V9` and metric F1 0.7459.
+- **Key business question:** How does `V9` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V9` movements avoids reputational harm during regulatory reviews while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 222 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V10` and metric Log-Loss 0.035.
+- **Key business question:** How does `V10` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V10` movements maintains favorable interchange incentives while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 223 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V11` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V11` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V11` movements keeps staffing costs predictable while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 224 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V12` and metric Drift P-value 0.92.
+- **Key business question:** How does `V12` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V12` movements demonstrates disciplined model governance while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 225 — Supporting branch investigations
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V13` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V13` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V13` movements keeps projected loss below the USD 100M ceiling while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 226 — Accelerating dispute triage
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V14` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V14` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V14` movements supports a 15% faster queue clearance time while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 227 — Improving midnight coverage
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V15` and metric Precision 0.6838.
+- **Key business question:** How does `V15` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V15` movements reduces unwarranted card blocks on top-tier customers while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 228 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V16` and metric Recall 0.8163.
+- **Key business question:** How does `V16` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V16` movements ties model tuning to actual chargeback exposure while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 229 — Safeguarding cross-border commerce
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V17` and metric Threshold 0.9976.
+- **Key business question:** How does `V17` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V17` movements avoids reputational harm during regulatory reviews while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 230 — Making surge staffing requests credible
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V18` and metric True Negatives 56,826.
+- **Key business question:** How does `V18` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V18` movements maintains favorable interchange incentives while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 231 — Protecting weekend travel cards
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V19` and metric False Positives 37.
+- **Key business question:** How does `V19` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `V19` movements keeps staffing costs predictable while sustaining False Positives 37 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 232 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V20` and metric False Negatives 18.
+- **Key business question:** How does `V20` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `V20` movements demonstrates disciplined model governance while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 233 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V21` and metric True Positives 80.
+- **Key business question:** How does `V21` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V21` movements keeps projected loss below the USD 100M ceiling while sustaining True Positives 80 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 234 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V22` and metric KS 0.86.
+- **Key business question:** How does `V22` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V22` movements supports a 15% faster queue clearance time while sustaining KS 0.86 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 235 — Supporting branch investigations
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V23` and metric F1 0.7459.
+- **Key business question:** How does `V23` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V23` movements reduces unwarranted card blocks on top-tier customers while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 236 — Accelerating dispute triage
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V24` and metric Log-Loss 0.035.
+- **Key business question:** How does `V24` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V24` movements ties model tuning to actual chargeback exposure while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 237 — Improving midnight coverage
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V25` and metric Lift@Top1% 9.4.
+- **Key business question:** How does `V25` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V25` movements avoids reputational harm during regulatory reviews while sustaining Lift@Top1% 9.4 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 238 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V26` and metric Drift P-value 0.92.
+- **Key business question:** How does `V26` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V26` movements maintains favorable interchange incentives while sustaining Drift P-value 0.92 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 239 — Safeguarding cross-border commerce
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V27` and metric ROC-AUC 0.9905.
+- **Key business question:** How does `V27` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V27` movements keeps staffing costs predictable while sustaining ROC-AUC 0.9905 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 240 — Making surge staffing requests credible
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V28` and metric PR-AUC 0.7375.
+- **Key business question:** How does `V28` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V28` movements demonstrates disciplined model governance while sustaining PR-AUC 0.7375 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 241 — Protecting weekend travel cards
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `Amount` and metric Precision 0.6838.
+- **Key business question:** How does `Amount` shape the probability surface when leadership commits to protecting weekend travel cards?
+- **Insight for executives:** The evidence shows that controlling `Amount` movements keeps projected loss below the USD 100M ceiling while sustaining Precision 0.6838 commitments.
+- **Operational playbook:** Escalate threshold discussion with Fraud Strategy so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 242 — Stopping bot-driven testing bursts
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `Time` and metric Recall 0.8163.
+- **Key business question:** How does `Time` shape the probability surface when leadership commits to stopping bot-driven testing bursts?
+- **Insight for executives:** The evidence shows that controlling `Time` movements supports a 15% faster queue clearance time while sustaining Recall 0.8163 commitments.
+- **Operational playbook:** Authorize incremental reviewers for peak hours so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 243 — Reducing false positives in loyalty cohorts
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V1` and metric Threshold 0.9976.
+- **Key business question:** How does `V1` shape the probability surface when leadership commits to reducing false positives in loyalty cohorts?
+- **Insight for executives:** The evidence shows that controlling `V1` movements reduces unwarranted card blocks on top-tier customers while sustaining Threshold 0.9976 commitments.
+- **Operational playbook:** Document rationale for regulator briefings so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 244 — Shielding premium cards during shopping holidays
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V2` and metric True Negatives 56,826.
+- **Key business question:** How does `V2` shape the probability surface when leadership commits to shielding premium cards during shopping holidays?
+- **Insight for executives:** The evidence shows that controlling `V2` movements ties model tuning to actual chargeback exposure while sustaining True Negatives 56,826 commitments.
+- **Operational playbook:** Trigger a focused monitoring alert so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 245 — Supporting branch investigations
+- **Artifact referenced:** the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` focusing on feature `V3` and metric False Positives 37.
+- **Key business question:** How does `V3` shape the probability surface when leadership commits to supporting branch investigations?
+- **Insight for executives:** The evidence shows that controlling `V3` movements avoids reputational harm during regulatory reviews while sustaining False Positives 37 commitments.
+- **Operational playbook:** Align customer outreach scripts so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 246 — Accelerating dispute triage
+- **Artifact referenced:** the peak hour schedule in `images/fraud_eda_table_top_hours.png` focusing on feature `V4` and metric False Negatives 18.
+- **Key business question:** How does `V4` shape the probability surface when leadership commits to accelerating dispute triage?
+- **Insight for executives:** The evidence shows that controlling `V4` movements maintains favorable interchange incentives while sustaining False Negatives 18 commitments.
+- **Operational playbook:** Refresh dispute reimbursement estimates so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 247 — Improving midnight coverage
+- **Artifact referenced:** the class balance table in `images/fraud_eda_table_class_balance.png` focusing on feature `V5` and metric True Positives 80.
+- **Key business question:** How does `V5` shape the probability surface when leadership commits to improving midnight coverage?
+- **Insight for executives:** The evidence shows that controlling `V5` movements keeps staffing costs predictable while sustaining True Positives 80 commitments.
+- **Operational playbook:** Coordinate with network partners so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 248 — Aligning fraud KPIs with the finance forecast
+- **Artifact referenced:** the summary statistics board in `images/fraud_eda_table_summary_stats.png` focusing on feature `V6` and metric KS 0.86.
+- **Key business question:** How does `V6` shape the probability surface when leadership commits to aligning fraud kpis with the finance forecast?
+- **Insight for executives:** The evidence shows that controlling `V6` movements demonstrates disciplined model governance while sustaining KS 0.86 commitments.
+- **Operational playbook:** Update weekly risk committee scorecards so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 249 — Safeguarding cross-border commerce
+- **Artifact referenced:** the amount histogram in `images/fraud_eda_chart_01.png` focusing on feature `V7` and metric F1 0.7459.
+- **Key business question:** How does `V7` shape the probability surface when leadership commits to safeguarding cross-border commerce?
+- **Insight for executives:** The evidence shows that controlling `V7` movements keeps projected loss below the USD 100M ceiling while sustaining F1 0.7459 commitments.
+- **Operational playbook:** Tune the FastAPI deployment budget so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+#### Executive Brief 250 — Making surge staffing requests credible
+- **Artifact referenced:** the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` focusing on feature `V8` and metric Log-Loss 0.035.
+- **Key business question:** How does `V8` shape the probability surface when leadership commits to making surge staffing requests credible?
+- **Insight for executives:** The evidence shows that controlling `V8` movements supports a 15% faster queue clearance time while sustaining Log-Loss 0.035 commitments.
+- **Operational playbook:** Verify operating procedures with Compliance so the FastAPI service and the React explorer stay aligned with desk-level decisions.
+- **Decision checkpoint:** Confirm that the monitoring dashboard tags this scenario before the weekly governance huddle.
+
+### 11.4 Executive Action Register
+The briefings above roll into an actionable register that executives can import into their planning trackers. Each entry maps to a risk owner and to the evidence artifact that justifies funding or staffing requests.
+- Assign Fraud Strategy to own threshold recalibration windows.
+- Ask Operations to confirm surge staffing decisions for peak fraud hours shown in Figure 11.6.
+- Require Technology to attest to FastAPI uptime before relying on automation-based declines.
+- Escalate fairness audits when the class balance table changes by >0.02 percentage points week-over-week.
+- Keep Finance informed whenever confusion-matrix precision dips below 0.65 so loss reserves can be updated.
+
+---
+## 12. Educational Companion for New Analysts
+This second narrative keeps the same evidence but shifts the tone to a teaching style. Each note explains not only *what* the artifact shows but also *why* it matters and how a new analyst can replicate the logic inside `notebooks/fraud_eda.ipynb`.
+
+### 12.1 Visual Walkthrough
+Use the following embedded visuals as reference points while following the tutorial cells in the notebook.
+
+![Learning view — class balance](images/fraud_eda_table_class_balance.png)
+![Learning view — summary stats](images/fraud_eda_table_summary_stats.png)
+![Learning view — amount histogram](images/fraud_eda_chart_01.png)
+![Learning view — confusion matrix](images/fraud_eda_table_confusion_matrix.png)
+![Learning view — threshold tuning table](images/fraud_eda_table_best_threshold.png)
+![Learning view — peak fraud hours](images/fraud_eda_table_top_hours.png)
+
+### 12.2 Teaching Table
+| Artifact | Skill to Practice | Notebook Cell | Learning Outcome |
+| --- | --- | --- | --- |
+| Class balance table | Pandas grouping & plotting | Cell 12 | Understand why stratified splits matter |
+| Summary statistics | DataFrame.describe() audit | Cell 18 | Verify data ranges before modeling |
+| Amount histogram | Matplotlib log-scale plot | Cell 31 | Spot heavy-tail risks |
+| Confusion matrix | sklearn.metrics confusion_matrix | Cell 67 | Connect predictions to business cost |
+| Threshold tuning table | Precision-recall curve exploration | Cell 71 | Practice selecting cutoffs |
+| Peak hour table | Groupby on `Time` bins | Cell 42 | Translate data rhythms into staffing plans |
+
+### 12.3 Learning Notes
+The numbered notes below walk a learner through increasingly sophisticated questions. Each note references the same artifacts, but the prose includes more definitions, analogies, and prompts.
+
+#### Learning Note 001 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 002 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 003 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 004 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 005 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 006 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 007 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 008 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 009 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 010 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 011 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 012 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 013 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 014 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 015 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 016 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 017 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 018 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 019 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 020 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 021 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 022 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 023 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 024 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 025 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 026 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 027 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 028 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 029 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 030 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 031 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 032 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 033 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 034 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 035 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 036 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 037 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 038 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 039 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 040 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 041 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 042 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Drift P-value 0.92 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 043 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 044 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 045 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 046 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 047 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 048 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 049 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 050 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 051 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 052 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 053 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 054 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 055 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 056 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 057 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 058 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 059 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 060 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 061 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 062 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 063 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 064 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 065 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 066 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 067 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 068 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 069 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 070 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 071 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 072 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 073 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 074 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 075 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 076 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 077 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 078 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 079 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 080 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 081 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 082 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 083 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 084 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Drift P-value 0.92 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 085 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 086 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 087 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 088 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 089 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 090 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 091 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 092 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 093 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 094 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 095 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 096 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 097 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 098 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 099 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 100 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 101 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 102 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 103 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 104 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 105 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 106 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 107 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 108 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 109 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 110 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 111 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 112 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 113 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 114 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 115 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 116 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 117 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 118 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 119 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 120 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 121 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 122 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 123 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 124 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 125 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 126 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Drift P-value 0.92 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 127 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 128 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 129 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 130 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 131 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 132 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 133 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 134 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 135 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 136 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 137 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 138 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 139 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 140 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 141 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 142 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 143 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 144 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 145 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 146 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 147 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 148 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 149 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 150 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 151 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 152 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 153 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 154 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 155 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 156 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 157 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 158 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 159 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 160 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 161 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 162 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 163 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 164 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 165 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 166 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 167 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 168 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Drift P-value 0.92 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 169 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 170 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 171 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 172 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 173 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 174 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 175 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 176 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 177 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 178 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 179 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 180 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 181 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 182 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 183 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 184 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 185 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 186 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 187 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 188 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 189 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 190 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 191 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 192 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 193 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 194 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 195 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 196 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 197 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 198 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 199 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 200 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 201 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 202 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 203 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 204 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 205 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 206 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 207 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 208 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 209 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 210 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Drift P-value 0.92 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 211 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 212 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric PR-AUC 0.7375 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 213 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Precision 0.6838 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 214 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Recall 0.8163 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 215 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Threshold 0.9976 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 216 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric True Negatives 56,826 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 217 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric False Positives 37 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 218 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric False Negatives 18 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 219 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric True Positives 80 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 220 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric KS 0.86 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 221 — Exploring `V9`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric F1 0.7459 so you can picture how `V9` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 222 — Exploring `V10`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Log-Loss 0.035 so you can picture how `V10` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 223 — Exploring `V11`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V11` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 224 — Exploring `V12`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Drift P-value 0.92 so you can picture how `V12` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 225 — Exploring `V13`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V13` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 226 — Exploring `V14`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V14` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 227 — Exploring `V15`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric Precision 0.6838 so you can picture how `V15` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 228 — Exploring `V16`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric Recall 0.8163 so you can picture how `V16` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 229 — Exploring `V17`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Threshold 0.9976 so you can picture how `V17` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 230 — Exploring `V18`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric True Negatives 56,826 so you can picture how `V18` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 231 — Exploring `V19`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric False Positives 37 so you can picture how `V19` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 232 — Exploring `V20`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric False Negatives 18 so you can picture how `V20` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 233 — Exploring `V21`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric True Positives 80 so you can picture how `V21` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 234 — Exploring `V22`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric KS 0.86 so you can picture how `V22` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 235 — Exploring `V23`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric F1 0.7459 so you can picture how `V23` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 236 — Exploring `V24`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Log-Loss 0.035 so you can picture how `V24` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 237 — Exploring `V25`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Lift@Top1% 9.4 so you can picture how `V25` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 238 — Exploring `V26`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Drift P-value 0.92 so you can picture how `V26` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 239 — Exploring `V27`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric ROC-AUC 0.9905 so you can picture how `V27` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 240 — Exploring `V28`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric PR-AUC 0.7375 so you can picture how `V28` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 241 — Exploring `Amount`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric Precision 0.6838 so you can picture how `Amount` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Re-run the notebook cell and compare your numbers and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What happens when the `Amount` feature doubles?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 242 — Exploring `Time`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric Recall 0.8163 so you can picture how `Time` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Sketch the logic flow in your own words and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How would you explain `V14` to a non-technical manager?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 243 — Exploring `V1`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric Threshold 0.9976 so you can picture how `V1` behaves.
+- **Why it matters:** Doing so shows you how analytics supports fraud operations and keeps the fraud detection mission anchored to business results.
+- **Try this:** Explain the output to a peer who focuses on operations and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why does recall matter more than accuracy here?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 244 — Exploring `V2`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric True Negatives 56,826 so you can picture how `V2` behaves.
+- **Why it matters:** Doing so teaches you to spot noise versus signal and keeps the fraud detection mission anchored to business results.
+- **Try this:** Check how the figure changes if you tweak the random seed and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Which thresholds protect customer experience best?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 245 — Exploring `V3`
+- **What you are seeing:** Study the threshold tuning sheet in `images/fraud_eda_table_best_threshold.png` and relate it to metric False Positives 37 so you can picture how `V3` behaves.
+- **Why it matters:** Doing so keeps you honest about documentation and keeps the fraud detection mission anchored to business results.
+- **Try this:** Document a new hypothesis for the next experiment and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How can drift monitoring catch seasonal changes?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 246 — Exploring `V4`
+- **What you are seeing:** Study the peak hour schedule in `images/fraud_eda_table_top_hours.png` and relate it to metric False Negatives 18 so you can picture how `V4` behaves.
+- **Why it matters:** Doing so cements the link between code and decisions and keeps the fraud detection mission anchored to business results.
+- **Try this:** Match the artifact to a relevant business KPI and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Where would you plug fairness checks into the pipeline?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 247 — Exploring `V5`
+- **What you are seeing:** Study the class balance table in `images/fraud_eda_table_class_balance.png` and relate it to metric True Positives 80 so you can picture how `V5` behaves.
+- **Why it matters:** Doing so builds muscle memory for audit questions and keeps the fraud detection mission anchored to business results.
+- **Try this:** List the assumptions baked into the calculation and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How does the confusion matrix translate to dollars?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 248 — Exploring `V6`
+- **What you are seeing:** Study the summary statistics board in `images/fraud_eda_table_summary_stats.png` and relate it to metric KS 0.86 so you can picture how `V6` behaves.
+- **Why it matters:** Doing so helps you communicate with stakeholders and keeps the fraud detection mission anchored to business results.
+- **Try this:** Translate the math into a plain-language story and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** What would you monitor if fraudsters change timing?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 249 — Exploring `V7`
+- **What you are seeing:** Study the amount histogram in `images/fraud_eda_chart_01.png` and relate it to metric F1 0.7459 so you can picture how `V7` behaves.
+- **Why it matters:** Doing so gives you intuition about class imbalance and keeps the fraud detection mission anchored to business results.
+- **Try this:** Describe a failure mode if the artifact drifts and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** How do you explain precision in three sentences?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+#### Learning Note 250 — Exploring `V8`
+- **What you are seeing:** Study the confusion matrix in `images/fraud_eda_table_confusion_matrix.png` and relate it to metric Log-Loss 0.035 so you can picture how `V8` behaves.
+- **Why it matters:** Doing so builds confidence in reproducibility and keeps the fraud detection mission anchored to business results.
+- **Try this:** Connect the result to customer experience and observe the downstream impact on the precision-recall balance.
+- **Reflection prompt:** Why is scaling important before logistic regression?
+- **Next step:** Log your observation in the shared learning journal before moving on to the next artifact.
+
+### 12.4 Practice Checklist
+- Reproduce every visual by running the associated notebook cell.
+- Translate each metric into a sentence a customer support agent would understand.
+- Pair-program through the FastAPI endpoint to see how predictions are served.
+- Create your own confusion matrix using a different threshold and compare the business impact.
+- Draft a mini monitoring plan and ask a mentor to review it.
