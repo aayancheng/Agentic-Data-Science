@@ -1,3 +1,171 @@
 <!doctype html>
-<html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Agentic Data Science</title></head>
-<body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Data Science</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <button class="collapse-handle" type="button" id="sidebar-collapse" aria-label="Collapse navigation">‹</button>
+        <div class="sidebar-content">
+          <div>
+            <div class="sidebar-brand">Agentic DS</div>
+            <div class="sidebar-subtext">Interactive ML showcases</div>
+          </div>
+          <button class="sidebar-link active" type="button" data-target="fraud">Fraud Detection Demo</button>
+          <div class="sidebar-section">
+            <button
+              class="sidebar-section-toggle"
+              type="button"
+              id="sidebar-other-toggle"
+              aria-expanded="true"
+            >
+              Other projects
+              <span id="sidebar-other-indicator">−</span>
+            </button>
+            <div class="sidebar-children" id="sidebar-other-links">
+              <button class="sidebar-link" type="button" data-target="taxi">NYC Taxi Forecast</button>
+              <button class="sidebar-link" type="button" data-target="sentiment">Support Sentiment</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <section id="fraud-view" class="fraud-shell" data-view="fraud">
+          <section class="hero-banner">
+            <div class="hero-content">
+              <span class="hero-chip">Fraud detection signals in motion</span>
+              <h1 class="hero-title">Fraud Threshold Explorer</h1>
+              <p class="hero-subtitle">
+                Tune model alerting for a curated batch of transactions. Observe how precision, recall, and alert volume dance as
+                you explore different thresholds.
+              </p>
+            </div>
+          </section>
+
+          <div id="fraud-loading" class="loading-panel">Loading demo transactions…</div>
+          <div id="fraud-error" class="error-panel hidden">
+            <strong>Could not load demo payload.</strong>
+            <p id="fraud-error-message"></p>
+            <button type="button" id="fraud-retry">Retry</button>
+          </div>
+          <div id="fraud-notice" class="info-panel hidden" role="status"></div>
+
+          <section id="threshold-controls" class="threshold-surface hidden">
+            <div class="threshold-header">
+              <div>
+                <h3>Decision Threshold</h3>
+                <p>Drag the slider or pick a preset to balance recall vs precision.</p>
+              </div>
+              <div class="threshold-value">Current: <span id="threshold-value">0.50</span></div>
+            </div>
+            <input
+              type="range"
+              min="0.05"
+              max="0.95"
+              step="0.01"
+              value="0.5"
+              id="threshold-slider"
+              class="threshold-slider"
+            />
+            <div class="threshold-presets" id="threshold-presets">
+              <button class="threshold-preset" type="button" data-value="0.2">High Recall (0.20)</button>
+              <button class="threshold-preset active" type="button" data-value="0.5">Balanced (0.50)</button>
+              <button class="threshold-preset" type="button" data-value="0.8">High Precision (0.80)</button>
+              <label class="manual-input">
+                Manual:
+                <input type="number" min="0.05" max="0.95" step="0.01" value="0.5" id="threshold-input" />
+              </label>
+            </div>
+          </section>
+
+          <div id="fraud-tabs" class="fraud-tabs hidden" role="tablist" aria-label="Fraud explorer views">
+            <button class="fraud-tab active" type="button" role="tab" aria-selected="true" data-panel="stats">
+              Key statistics
+            </button>
+            <button class="fraud-tab" type="button" role="tab" aria-selected="false" data-panel="transactions">
+              Transactions
+            </button>
+          </div>
+
+          <div id="fraud-panels">
+            <div id="fraud-stats-panel" class="fraud-panel" data-panel="stats">
+              <section class="metrics-surface overview-row" id="fraud-overview"></section>
+              <section class="metrics-summary">
+                <div class="metrics-grid" id="metrics-grid"></div>
+              </section>
+              <div class="insight-row">
+                <section class="metrics-surface chart-card">
+                  <div class="chart-header">
+                    <h3>Precision &amp; Recall vs Threshold</h3>
+                    <div class="chart-legend">
+                      <span class="legend precision">● Precision</span>
+                      <span class="legend recall">● Recall</span>
+                    </div>
+                  </div>
+                  <svg id="precision-recall-chart" role="img" aria-label="Precision and recall chart"></svg>
+                  <div class="chart-insight" id="chart-insight"></div>
+                </section>
+                <section class="metrics-surface confusion-card">
+                  <div class="confusion-header">
+                    <h3>Confusion Matrix</h3>
+                    <p>Performance at the current threshold.</p>
+                  </div>
+                  <div class="matrix-grid" id="confusion-grid"></div>
+                </section>
+              </div>
+            </div>
+            <div id="fraud-transactions-panel" class="fraud-panel hidden" data-panel="transactions">
+              <section class="transaction-surface">
+                <div class="transaction-header">
+                  <div>
+                    <h3>Transactions (<span id="transactions-count">0</span>)</h3>
+                    <p>Outcome coloring updates live with the active threshold.</p>
+                  </div>
+                  <div class="filter-bar" id="transaction-filters"></div>
+                </div>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr class="table-head">
+                        <th>Txn ID</th>
+                        <th>Amount</th>
+                        <th>Merchant</th>
+                        <th>Country</th>
+                        <th>Card Network</th>
+                        <th>Channel</th>
+                        <th>Fraud Prob</th>
+                        <th>Model Flag</th>
+                        <th>Actual</th>
+                      </tr>
+                    </thead>
+                    <tbody id="transactions-body"></tbody>
+                  </table>
+                </div>
+                <div class="legend-row" id="transactions-legend"></div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="taxi-view" class="placeholder hidden" data-view="taxi">
+          <h2>NYC Taxi — demand</h2>
+          <p>Coming soon. Show hourly/zone forecasts once model is trained.</p>
+        </section>
+
+        <section id="sentiment-view" class="placeholder hidden" data-view="sentiment">
+          <h2>Support sentiment explorer</h2>
+          <p>Coming soon. Plug in live support transcripts to surface trending moods.</p>
+        </section>
+
+        <footer class="app-footer">
+          Backend: http://localhost:8000 • Frontend Dev: http://localhost:5173
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

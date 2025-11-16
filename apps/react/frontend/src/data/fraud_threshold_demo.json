@@ -1,0 +1,514 @@
+{
+  "generated_at": "2025-11-10T22:54:47Z",
+  "metadata": {
+    "model_version": "demo-calibrated-v1",
+    "sample_size": 50,
+    "class_balance": {
+      "fraud": 25,
+      "legit": 25
+    },
+    "avg_prob": 0.4893
+  },
+  "transactions": [
+    {
+      "txn_id": "TX-001",
+      "amount": 104.96,
+      "merchant": "Tempo Fitness",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "SG",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.5054
+    },
+    {
+      "txn_id": "TX-002",
+      "amount": 107.46,
+      "merchant": "Summit Outdoors",
+      "card_network": "Discover",
+      "channel": "E-Commerce",
+      "country": "DE",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.5724
+    },
+    {
+      "txn_id": "TX-003",
+      "amount": 149.13,
+      "merchant": "Northwind Market",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7753
+    },
+    {
+      "txn_id": "TX-004",
+      "amount": 62.05,
+      "merchant": "Verde Organics",
+      "card_network": "Amex",
+      "channel": "E-Commerce",
+      "country": "DE",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.3012
+    },
+    {
+      "txn_id": "TX-005",
+      "amount": 126.25,
+      "merchant": "Urban Threads",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.3927
+    },
+    {
+      "txn_id": "TX-006",
+      "amount": 125.04,
+      "merchant": "Orbit RideShare",
+      "card_network": "Visa",
+      "channel": "In-App",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.3393
+    },
+    {
+      "txn_id": "TX-007",
+      "amount": 289.94,
+      "merchant": "Blue River Travel",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.6737
+    },
+    {
+      "txn_id": "TX-008",
+      "amount": 270.97,
+      "merchant": "Orbit RideShare",
+      "card_network": "Amex",
+      "channel": "E-Commerce",
+      "country": "UK",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7461
+    },
+    {
+      "txn_id": "TX-009",
+      "amount": 153.54,
+      "merchant": "Skyline Electronics",
+      "card_network": "Amex",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7519
+    },
+    {
+      "txn_id": "TX-010",
+      "amount": 263.75,
+      "merchant": "Verde Organics",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2083
+    },
+    {
+      "txn_id": "TX-011",
+      "amount": 187.04,
+      "merchant": "Tempo Fitness",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.216
+    },
+    {
+      "txn_id": "TX-012",
+      "amount": 68.09,
+      "merchant": "Northwind Market",
+      "card_network": "Amex",
+      "channel": "In-App",
+      "country": "UK",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.01
+    },
+    {
+      "txn_id": "TX-013",
+      "amount": 108.84,
+      "merchant": "Orbit RideShare",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1728
+    },
+    {
+      "txn_id": "TX-014",
+      "amount": 51.24,
+      "merchant": "Metro Grocery",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "UK",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7722
+    },
+    {
+      "txn_id": "TX-015",
+      "amount": 113.78,
+      "merchant": "Blue River Travel",
+      "card_network": "Amex",
+      "channel": "E-Commerce",
+      "country": "SG",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.616
+    },
+    {
+      "txn_id": "TX-016",
+      "amount": 203.72,
+      "merchant": "Urban Threads",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1586
+    },
+    {
+      "txn_id": "TX-017",
+      "amount": 133.26,
+      "merchant": "Metro Grocery",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1771
+    },
+    {
+      "txn_id": "TX-018",
+      "amount": 274.85,
+      "merchant": "Urban Threads",
+      "card_network": "Discover",
+      "channel": "In-App",
+      "country": "DE",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1967
+    },
+    {
+      "txn_id": "TX-019",
+      "amount": 219.19,
+      "merchant": "Urban Threads",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "FR",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.5125
+    },
+    {
+      "txn_id": "TX-020",
+      "amount": 176.61,
+      "merchant": "Urban Threads",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.6695
+    },
+    {
+      "txn_id": "TX-021",
+      "amount": 96.84,
+      "merchant": "Aurora Jewelers",
+      "card_network": "Amex",
+      "channel": "In-Store",
+      "country": "BR",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.357
+    },
+    {
+      "txn_id": "TX-022",
+      "amount": 60.04,
+      "merchant": "Metro Grocery",
+      "card_network": "Amex",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7041
+    },
+    {
+      "txn_id": "TX-023",
+      "amount": 347.38,
+      "merchant": "Blue River Travel",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.99
+    },
+    {
+      "txn_id": "TX-024",
+      "amount": 238.39,
+      "merchant": "Metro Grocery",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.3181
+    },
+    {
+      "txn_id": "TX-025",
+      "amount": 70.38,
+      "merchant": "Skyline Electronics",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "FR",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2528
+    },
+    {
+      "txn_id": "TX-026",
+      "amount": 69.71,
+      "merchant": "Skyline Electronics",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.6825
+    },
+    {
+      "txn_id": "TX-027",
+      "amount": 130.4,
+      "merchant": "Summit Outdoors",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "UK",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.99
+    },
+    {
+      "txn_id": "TX-028",
+      "amount": 377.83,
+      "merchant": "Tempo Fitness",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "SG",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.8085
+    },
+    {
+      "txn_id": "TX-029",
+      "amount": 149.82,
+      "merchant": "Skyline Electronics",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1453
+    },
+    {
+      "txn_id": "TX-030",
+      "amount": 303.24,
+      "merchant": "Orbit RideShare",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "FR",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.8262
+    },
+    {
+      "txn_id": "TX-031",
+      "amount": 148.02,
+      "merchant": "Aurora Jewelers",
+      "card_network": "Discover",
+      "channel": "E-Commerce",
+      "country": "BR",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.3084
+    },
+    {
+      "txn_id": "TX-032",
+      "amount": 101.69,
+      "merchant": "Blue River Travel",
+      "card_network": "Amex",
+      "channel": "E-Commerce",
+      "country": "UK",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1154
+    },
+    {
+      "txn_id": "TX-033",
+      "amount": 102.64,
+      "merchant": "Blue River Travel",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "BR",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7593
+    },
+    {
+      "txn_id": "TX-034",
+      "amount": 111.5,
+      "merchant": "Northwind Market",
+      "card_network": "Discover",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.9202
+    },
+    {
+      "txn_id": "TX-035",
+      "amount": 144.79,
+      "merchant": "Tempo Fitness",
+      "card_network": "Amex",
+      "channel": "Call Center",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.9888
+    },
+    {
+      "txn_id": "TX-036",
+      "amount": 74.26,
+      "merchant": "Verde Organics",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "DE",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2816
+    },
+    {
+      "txn_id": "TX-037",
+      "amount": 118.33,
+      "merchant": "Urban Threads",
+      "card_network": "Amex",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2188
+    },
+    {
+      "txn_id": "TX-038",
+      "amount": 132.89,
+      "merchant": "Aurora Jewelers",
+      "card_network": "Amex",
+      "channel": "In-App",
+      "country": "AU",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2693
+    },
+    {
+      "txn_id": "TX-039",
+      "amount": 97.83,
+      "merchant": "Tempo Fitness",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "CA",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2484
+    },
+    {
+      "txn_id": "TX-040",
+      "amount": 52.22,
+      "merchant": "Metro Grocery",
+      "card_network": "Visa",
+      "channel": "In-Store",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7063
+    },
+    {
+      "txn_id": "TX-041",
+      "amount": 186.68,
+      "merchant": "Urban Threads",
+      "card_network": "Visa",
+      "channel": "In-App",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1881
+    },
+    {
+      "txn_id": "TX-042",
+      "amount": 101.18,
+      "merchant": "Orbit RideShare",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "CA",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.6605
+    },
+    {
+      "txn_id": "TX-043",
+      "amount": 143.43,
+      "merchant": "Urban Threads",
+      "card_network": "Amex",
+      "channel": "In-Store",
+      "country": "FR",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.1005
+    },
+    {
+      "txn_id": "TX-044",
+      "amount": 68.47,
+      "merchant": "Orbit RideShare",
+      "card_network": "Mastercard",
+      "channel": "In-Store",
+      "country": "BR",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.4283
+    },
+    {
+      "txn_id": "TX-045",
+      "amount": 120.31,
+      "merchant": "Urban Threads",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.9151
+    },
+    {
+      "txn_id": "TX-046",
+      "amount": 45.86,
+      "merchant": "Tempo Fitness",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "US",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.6388
+    },
+    {
+      "txn_id": "TX-047",
+      "amount": 120.16,
+      "merchant": "Verde Organics",
+      "card_network": "Mastercard",
+      "channel": "In-App",
+      "country": "UK",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7822
+    },
+    {
+      "txn_id": "TX-048",
+      "amount": 383.21,
+      "merchant": "Metro Grocery",
+      "card_network": "Visa",
+      "channel": "In-App",
+      "country": "US",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.0612
+    },
+    {
+      "txn_id": "TX-049",
+      "amount": 150.93,
+      "merchant": "Orbit RideShare",
+      "card_network": "Mastercard",
+      "channel": "E-Commerce",
+      "country": "AU",
+      "is_fraud_actual": true,
+      "fraud_prob": 0.7985
+    },
+    {
+      "txn_id": "TX-050",
+      "amount": 128.87,
+      "merchant": "Skyline Electronics",
+      "card_network": "Visa",
+      "channel": "E-Commerce",
+      "country": "AU",
+      "is_fraud_actual": false,
+      "fraud_prob": 0.2321
+    }
+  ]
+}
